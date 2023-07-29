@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Website</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1 class="logo sticky"></h1>
+        <div class="hamburg-menu" id="hamburg-menu" onclick="menuShow()">
+          <div class="hm-container">
+            <span></span>
+          </div>
+        </div>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#activity">Service</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="main-visual">
+        <h2>Webサイト<br />作りませんか？</h2>
+      </div>
+    </header>
+    <main>
+      <section id="news">
+        <h2>News</h2>
+        <p>お知らせ</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>2023.03.20</td>
+              <td>ホームページをリニューアルしました！</td>
+            </tr>
+            <tr>
+              <td>2023.03.01</td>
+              <td>テキストテキストテキストテキストテキストテキスト</td>
+            </tr>
+            <tr>
+              <td>2023.02.20</td>
+              <td>
+                テキストテキストテキストテキストテキストテキストテキスト。テキストテキストテキストテキストテキストテキストテキストテキスト
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="concept">
+        <img src="./img/concept.jpg" alt="" />
+        <div class="concept-text-area">
+          <h3>
+            全面的に<br />
+            サポートをいたします
+          </h3>
+          <p>
+            テキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキスト
+          </p>
+        </div>
+      </section>
+      <section id="activity">
+        <h2>Activity</h2>
+        <p>サービス</p>
+        <div class="cards">
+          <div class="card-body">
+            <img src="./img/app.jpg" alt="app" />
+            <h4 class="card-title">App</h4>
+          </div>
+          <div class="card-body">
+            <img src="./img/coding.jpg" alt="coding" />
+            <h4 class="card-title">Coding</h4>
+          </div>
+          <div class="card-body">
+            <img src="./img/design.jpg" alt="design" />
+            <h4 class="card-title">Design</h4>
+          </div>
+        </div>
+        <a href="#">お問い合わせ</a>
+      </section>
+    </main>
+    <footer id="footer">
+      <nav>
+        <ul>
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>Concept</li></a>
+          <a href="#"><li>Service</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </nav>
+      <p>&copy; 2023 Copyright</p>
+    </footer>
+    <!-- Scroll to Top -->
+    <a href="#" class="toTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <script>
+      window.onload = function () {
+        var elements = document.querySelectorAll('.sticky')
+        Stickyfill.add(elements)
+      }
+
+      function menuShow() {
+        const hamburgMenu = document.querySelector('#hamburg-menu')
+        const hamburgMenuEl = document.querySelector('#menu')
+
+        hamburgMenuEl.classList.toggle('show')
+        hamburgMenu.classList.toggle('show')
+      }
+    </script>
+  </body>
+</html>
