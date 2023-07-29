@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Website</title>
+    <title>Web Design Agency</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -86,7 +86,7 @@
             <h4 class="card-title">Design</h4>
           </div>
         </div>
-        <a href="#">お問い合わせ</a>
+        <button id="formBtn" onclick="formShow()">お問い合わせ</button>
       </section>
     </main>
     <footer id="footer">
@@ -100,6 +100,53 @@
       </nav>
       <p>&copy; 2023 Copyright</p>
     </footer>
+    <!-- 問い合わせフォーム -->
+    <div class="modal fade" id="form">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">お問い合わせ</h5>
+          </div>
+          <div class="modal-body">
+            <p>ご送信後3日以内返事いたします。</p>
+            <form>
+              <div>
+                <label for="first-name"> 姓： </label>
+                <input type="text" id="first-name" />
+              </div>
+              <div>
+                <label for="last-name">名：</label>
+                <input type="text" id="last-name" />
+              </div>
+              <div>
+                <label for="email">メール：</label>
+                <input type="email" id="email" />
+              </div>
+              <div>
+                <label for="phone">電話：</label>
+                <input type="tel" id="phone" />
+              </div>
+              <div>
+                <label for="message">メッセージ：</label>
+                <textarea name="message" id="message"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="closeBtn"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Scroll to Top -->
     <a href="#" class="toTop">
       <i class="fas fa-arrow-up"></i>
@@ -116,6 +163,17 @@
 
         hamburgMenuEl.classList.toggle('show')
         hamburgMenu.classList.toggle('show')
+      }
+
+      function formShow() {
+        const form = document.getElementById('form')
+        const closeBtn = document.getElementById('closeBtn')
+
+        form.classList.add('show')
+
+        closeBtn.addEventListener('click', function (e) {
+          form.classList.remove('show')
+        })
       }
     </script>
   </body>
