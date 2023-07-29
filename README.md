@@ -1,2 +1,6 @@
 # web-design-demo
-A demo landing page for a web design agency
+
+Web デザインサービスの LP サイトとなります。<br />
+
+<a href="https://ks-webdev.github.io/web-design-demo/" style="color:#ffffff;text-decoration:none;">👉🏻
+こちらから DEMO</a>
