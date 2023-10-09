@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Web Design Agency</title>
+    <title>Website</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -25,9 +25,9 @@
         </div>
         <ul id="menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#concept">Concept</a></li>
+          <li><a href="#concept">Copcept</a></li>
           <li><a href="#activity">Service</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
       <div class="main-visual">
@@ -35,7 +35,7 @@
       </div>
     </header>
     <main>
-      <section id="news">
+      <section id="news" class="scrollama">
         <h2>News</h2>
         <p>お知らせ</p>
         <table>
@@ -57,8 +57,8 @@
           </tbody>
         </table>
       </section>
-      <section id="concept">
-        <img src="./img/concept.jpg" alt="" />
+      <section id="concept" class="scrollama">
+        <img src="./img/concept.jpg" alt="concept" />
         <div class="concept-text-area">
           <h3>
             全面的に<br />
@@ -69,7 +69,7 @@
           </p>
         </div>
       </section>
-      <section id="activity">
+      <section id="activity" class="scrollama">
         <h2>Activity</h2>
         <p>サービス</p>
         <div class="cards">
@@ -92,10 +92,10 @@
     <footer id="footer">
       <nav>
         <ul>
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>Concept</li></a>
-          <a href="#"><li>Service</li></a>
-          <a href="#"><li>Contact</li></a>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Copcept</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
       <p>&copy; 2023 Copyright</p>
@@ -146,35 +146,13 @@
         </div>
       </div>
     </div>
-
     <!-- Scroll to Top -->
     <a href="#" class="toTop">
       <i class="fas fa-arrow-up"></i>
     </a>
-    <script>
-      window.onload = function () {
-        var elements = document.querySelectorAll('.sticky')
-        Stickyfill.add(elements)
-      }
 
-      function menuShow() {
-        const hamburgMenu = document.querySelector('#hamburg-menu')
-        const hamburgMenuEl = document.querySelector('#menu')
-
-        hamburgMenuEl.classList.toggle('show')
-        hamburgMenu.classList.toggle('show')
-      }
-
-      function formShow() {
-        const form = document.getElementById('form')
-        const closeBtn = document.getElementById('closeBtn')
-
-        form.classList.add('show')
-
-        closeBtn.addEventListener('click', function (e) {
-          form.classList.remove('show')
-        })
-      }
-    </script>
+    <!-- JS -->
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="app.js"></script>
   </body>
 </html>
