@@ -446,6 +446,15 @@ footer p {
     grid-template-columns: 1fr;
   }
 
+  #activity .card-body {
+    cursor: pointer;
+    transition: all 0.8s linear;
+  }
+
+  #activity .card-body:hover {
+    transform: scale(1.1);
+  }
+
   #activity a {
     display: block;
   }
@@ -458,4 +467,17 @@ footer p {
   footer nav ul li {
     text-align: center;
   }
+}
+
+/* Scrollama */
+.scrollama {
+  opacity: 0;
+}
+.scrollama.active {
+  opacity: 1;
+  transition: 1s linear all;
+}
+.scrollama.inactive {
+  opacity: 0;
+  transition: 1s linear all;
 }
